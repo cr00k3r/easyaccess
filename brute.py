@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 import re
 import requests
-#from __future__ import print_function
+from __future__ import print_function
 
 def open_ressources(file_path):
     return [item.replace("\n", "") for item in open(file_path).readlines()]
 
-host = 'http://'
-login_url = host + '/admin/login'
+host = 'url'
+login_url = host + '/login/form'
 username = ''
-wordlist = open_ressources('/wordlists.txt')
+wordlist = open_ressources('/wordlist.txt')
 
 for password in wordlist:
     session = requests.Session()
